@@ -1,9 +1,13 @@
 ; web4r.el
 ; 
+; Copyright (c) Tomoyuki Matsumoto
+; BSD license - http://www.opensource.org/licenses/bsd-license.php
+; 
 ; Configurations:
 ;  1. Make sure web4r.el is in your load-path
 ;  2. Add following line to your .emacs file
 ;     (load "web4r")
+; 
 ;  Note: this elisp affects entire lisp mode.
 
 ; --- auto-mode-alist -------------------------------------------
