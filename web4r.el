@@ -20,9 +20,6 @@
 
 ; --- Indentations and Font lock faces --------------------------
 
-(defun web4r-indent (symbol indent)
-  (put symbol 'lisp-indent-function indent))
-
 (defun web4r-face (symbol face)
   (let* ((key (symbol-name symbol))
          (reg (concat "\\(" key " \\|" key "\n\\)")))
@@ -30,7 +27,7 @@
      'lisp-mode (list (cons reg face)))))
 
 (defun web4r-func (symbol indent face)
-  (web4r-indent symbol indent)
+  (put symbol 'lisp-indent-function indent))
   (web4r-face symbol face))
 
 (put 'defpage 'lisp-indent-hook 'defun)
