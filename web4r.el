@@ -10,21 +10,12 @@
 ; 
 ;  Note: this elisp affects entire lisp mode.
 
-; --- auto-mode-alist -------------------------------------------
-
-(defvar web4r-additional-extensions '("\\.shtml$"))
-
-(mapcar #'(lambda (e)
-            (add-to-list 'auto-mode-alist (cons e 'lisp-mode)))
-          web4r-additional-extensions)
-
-; --- Indentations and Font lock faces --------------------------
+(add-to-list 'auto-mode-alist (cons "\\.shtml$" 'lisp-mode))
 
 (defun web4r-face (symbol face)
   (let* ((key (symbol-name symbol))
          (reg (concat "\\(" key " \\|" key "\n\\)")))
-    (font-lock-add-keywords
-     'lisp-mode (list (cons reg face)))))
+    (font-lock-add-keywords 'lisp-mode (list (cons reg face)))))
 
 (defun web4r-func (symbol indent face)
   (put symbol 'lisp-indent-function indent))
