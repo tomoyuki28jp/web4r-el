@@ -13,10 +13,8 @@
 (add-to-list 'auto-mode-alist (cons "\\.shtml$" 'lisp-mode))
 
 (defun web4r-face (symbol face)
-  (mapcar #'(lambda (x)
-              (let ((r (concat "(\\(" (symbol-name symbol) "\\)" x)))
-                (font-lock-add-keywords 'lisp-mode (list (list r 1 face)))))
-          '(" " "\n" ")")))
+  (let ((r (concat "(\\(" (symbol-name symbol) "\\)[ \n)]")))
+    (font-lock-add-keywords 'lisp-mode (list (list r 1 face)))))
 
 (defun web4r-func (symbol indent face)
   (put symbol 'lisp-indent-function indent)
