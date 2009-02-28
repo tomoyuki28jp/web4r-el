@@ -14,8 +14,8 @@
 
 (defun web4r-face (symbol face)
   (let* ((key (symbol-name symbol))
-         (reg (concat "\\(" key " \\|" key "\n\\)")))
-    (font-lock-add-keywords 'lisp-mode (list (cons reg face)))))
+         (reg (concat "(\\(\\" key " \\|" key "\n\\)")))
+    (font-lock-add-keywords 'lisp-mode (list (list reg 1 face)))))
 
 (defun web4r-func (symbol indent face)
   (put symbol 'lisp-indent-function indent)
