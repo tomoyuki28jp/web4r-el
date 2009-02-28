@@ -18,7 +18,7 @@
     (font-lock-add-keywords 'lisp-mode (list (cons reg face)))))
 
 (defun web4r-func (symbol indent face)
-  (put symbol 'lisp-indent-function indent))
+  (put symbol 'lisp-indent-function indent)
   (web4r-face symbol face))
 
 (put 'defpage 'lisp-indent-hook 'defun)
