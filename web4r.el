@@ -23,11 +23,9 @@
 (put 'defpage 'lisp-indent-hook 'defun)
 (web4r-face 'defpage 'font-lock-keyword-face)
 
-(web4r-func 'while                1   'font-lock-keyword-face)
 (web4r-func 'aif                  2   'font-lock-keyword-face)
 (web4r-func 'awhen                1   'font-lock-keyword-face)
 (web4r-func 'aand                 nil 'font-lock-keyword-face)
-(web4r-func 'awhile               1   'font-lock-keyword-face)
 (web4r-func 'define-shtml         nil 'font-lock-keyword-face)
 (web4r-func 'form-for/cont/       1   'font-lock-function-name-face)
 (web4r-func 'a/cont/              1   'font-lock-function-name-face)
