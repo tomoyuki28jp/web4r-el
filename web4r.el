@@ -30,7 +30,6 @@
 (web4r-func 'form-for/cont/       1   'font-lock-function-name-face)
 (web4r-func 'a/cont/              1   'font-lock-function-name-face)
 (web4r-func 'form/cont/           1   'font-lock-function-name-face)
-(web4r-func 'multipart-form/cont/ 1   'font-lock-function-name-face)
 (web4r-func 'page-lambda          2   'font-lock-keyword-face)
 (web4r-func 'defpclass            3   'font-lock-keyword-face)
 
