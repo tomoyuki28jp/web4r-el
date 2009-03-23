@@ -22,6 +22,7 @@
 
 (put 'defpage 'lisp-indent-hook 'defun)
 (web4r-face 'defpage 'font-lock-keyword-face)
+(web4r-face 'define-validator 'font-lock-keyword-face)
 
 (web4r-func 'aif                  2   'font-lock-keyword-face)
 (web4r-func 'awhen                1   'font-lock-keyword-face)
