@@ -51,4 +51,5 @@
      tt/        ul/        var/         a/           b/
      br/        area/      base/        basefont/    col/
      frame/     hr/        img/         input/       isindex/
-     link/      meta/      param/       input-text/  submit/))
+     link/      meta/      param/       input-text/  input-file/
+     submit/    multipart-form/))
