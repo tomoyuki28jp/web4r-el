@@ -36,20 +36,20 @@
 
 (mapcar
  #'(lambda (x) (web4r-face x 'font-lock-function-name-face))
-   '(bdo/       big/       blockquote/  body/        button/
-     caption/   cite/      code/        colgroup/    dd/
-     del/       dfn/       div/         dl/          dt/
-     em/        fieldset/  form/        font/        h1/
-     h2/        h3/        h4/          h5/          h6/
-     head/      html/      i/           ins/         kbd/
-     label/     legend/    li/          map/         noscript/
-     object/    ol/        optgroup/    option/      p/
-     pre/       q/         samp/        script/      select/
-     small/     span/      strong/      style/       sub/
-     sup/       table/     textarea/    tbody/       td/
-     tfoot/     th/        thead/       title/       tr/
-     tt/        ul/        var/         a/           b/
-     br/        area/      base/        basefont/    col/
-     frame/     hr/        img/         input/       isindex/
-     link/      meta/      param/       input-text/  input-file/
-     submit/    multipart-form/))
+   '(bdo/        big/        blockquote/  body/        button/
+     caption/    cite/       code/        colgroup/    dd/
+     del/        dfn/        div/         dl/          dt/
+     em/         fieldset/   form/        font/        h1/
+     h2/         h3/         h4/          h5/          h6/
+     head/       html/       i/           ins/         kbd/
+     label/      legend/     li/          map/         noscript/
+     object/     ol/         optgroup/    option/      p/
+     pre/        q/          samp/        script/      select/
+     small/      span/       strong/      style/       sub/
+     sup/        table/      textarea/    tbody/       td/
+     tfoot/      th/         thead/       title/       tr/
+     tt/         ul/         var/         a/           b/
+     br/         area/       base/        basefont/    col/
+     frame/      hr/         img/         input/       isindex/
+     link/       meta/       param/       submit/      multipart-form/
+     input-file/ input-text/ input-checked/))
