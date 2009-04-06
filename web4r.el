@@ -10,7 +10,13 @@
 ; 
 ;  Note: this elisp affects entire lisp mode.
 
-(add-to-list 'auto-mode-alist (cons "\\.shtml$" 'lisp-mode))
+(add-to-list 'auto-mode-alist (cons "\\.sml$" 'lisp-mode))
+
+(setf lisp-mode-syntax-table
+  (let ((table (copy-syntax-table emacs-lisp-mode-syntax-table)))
+    (modify-syntax-entry ?[ "(^" table)
+    (modify-syntax-entry ?] ")$" table)
+    table))
 
 (defun web4r-face (symbol face)
   (let ((r (concat "\\([^']\\|^\\)(\\(" (symbol-name symbol) "\\)[ \n)]")))
@@ -34,23 +40,3 @@
 (web4r-func 'form/cont/      1    'font-lock-function-name-face)
 (web4r-func 'page-lambda     2    'font-lock-keyword-face)
 (web4r-func 'defpclass       3    'font-lock-keyword-face)
-
-(mapcar
- #'(lambda (x) (web4r-face x 'font-lock-function-name-face))
-   '(bdo/        big/        blockquote/  body/        button/
-     caption/    cite/       code/        colgroup/    dd/
-     del/        dfn/        div/         dl/          dt/
-     em/         fieldset/   form/        font/        h1/
-     h2/         h3/         h4/          h5/          h6/
-     head/       html/       i/           ins/         kbd/
-     label/      legend/     li/          map/         noscript/
-     object/     ol/         optgroup/    option/      p/
-     pre/        q/          samp/        script/      select/
-     small/      span/       strong/      style/       sub/
-     sup/        table/      textarea/    tbody/       td/
-     tfoot/      th/         thead/       title/       tr/
-     tt/         ul/         var/         a/           b/
-     br/         area/       base/        basefont/    col/
-     frame/      hr/         img/         input/       isindex/
-     link/       meta/       param/       submit/      multipart-form/
-     input-file/ input-text/ input-checked/))
