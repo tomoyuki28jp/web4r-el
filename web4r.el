@@ -7,8 +7,8 @@
 ;  1. Make sure web4r.el is in your load-path
 ;  2. Add following line to your .emacs file
 ;     (load "web4r")
-; 
-;  Note: this elisp affects entire lisp mode.
+
+; Note: this elisp affects entire lisp mode.
 
 (add-to-list 'auto-mode-alist (cons "\\.sml$" 'lisp-mode))
 
@@ -31,7 +31,7 @@
 (web4r-face 'define-validator 'font-lock-keyword-face)
 
 (web4r-func 'when-let        1    'font-lock-keyword-face)
-(web4r-func 'aif             2    'font-lock-keyword-face)
+(web4r-func 'aif             0    'font-lock-keyword-face)
 (web4r-func 'awhen           1    'font-lock-keyword-face)
 (web4r-func 'aand            nil  'font-lock-keyword-face)
 (web4r-func 'define-shtml    nil  'font-lock-keyword-face)
